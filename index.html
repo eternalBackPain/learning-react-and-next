@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning React and Next</title>
+</head>
+
+<body>
+    <!-- adding react libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- adding babel to interpret JSX - syntax extension for JavaScript that allows you to describe your UI in a familiar HTML-like syntax. The nice thing about JSX is that apart from following three JSX rules, you don’t need to learn any new symbols or syntax outside of HTML and JavaScript. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <div id="app"></div>
+
+    <!-- you will need to inform Babel what code to transform by changing the script type to type=text/jsx -->
+    <script type="text/jsx">
+        const app = document.querySelector('#app')
+        
+        function Header () {
+            return (<h1>Develop. Preview. Ship. 🚀</h1>)
+        }
+        
+        ReactDOM.render(header(), app);
+
+
+    </script>
+
+
+</body>
+
+</html>
