@@ -53,6 +53,6 @@ USING REACT (Use the CDN scripts):
 
 Three core concepts of React:
 - Components (= building blocks; = function that returns UI elements)
-- Props
+- Props (= you can design components that accept custom arguments (or props) that change the component’s behavior or what is visibly shown when it’s rendered to the screen. Then, you can pass down these props from parent components to child components.)
 - State
 
