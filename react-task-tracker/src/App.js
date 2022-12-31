@@ -49,7 +49,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header onAdd={() => setShowAddTask(!showAddTask)} />
+      <Header
+        onAdd={
+          // () => console.log("clicked")
+          () => setShowAddTask(!showAddTask)
+        }
+        showAdd={showAddTask}
+      />
       {/* //if showAddTask is true then show the forms */}
       {showAddTask && <AddTask onAdd={addTask} />}
       {/* If there are more than 0 tasks then show them, else show a message */}
