@@ -9,4 +9,7 @@
 9. APIs: You can use the api folder to make your own APIs, and have the app call to that api (instead of calling to an external API as we've done). This is done by setting up functions that take in a request and a response. 
 10. Consider making a default meta component so that you dont need to import the Head every time and add it to Layout.js
 
-X. Build then deploy on Vercel
+Build then deploy on Vercel
+
+![image](https://user-images.githubusercontent.com/97266283/210163956-93506c9e-28a2-412a-9342-9f211eacf496.png)
+
