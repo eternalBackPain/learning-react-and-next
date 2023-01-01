@@ -7,6 +7,9 @@ Gave up at (basically the end so good work John): https://reactjs.org/tutorial/t
 
 This is some difficult shit.
 
+![image](https://user-images.githubusercontent.com/97266283/210164038-86dfa175-e8af-4ef3-9825-6cf9cb421992.png)
+
+
 ---------------------------------------------
 
 
