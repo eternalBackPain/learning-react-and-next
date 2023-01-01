@@ -5,6 +5,11 @@ import { useState } from "react";
 
 import AddTask from "./components/AddTask";
 
+//For routing:
+import Footer from "./components/Footer";
+import About from "./components/About";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 function App() {
   //Declaring a new state variable to show/hide the button (parameter in useState is the default state)
   const [showAddTask, setShowAddTask] = useState(false);
@@ -48,23 +53,37 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header
-        onAdd={
-          // () => console.log("clicked")
-          () => setShowAddTask(!showAddTask)
-        }
-        showAdd={showAddTask}
-      />
-      {/* //if showAddTask is true then show the forms */}
-      {showAddTask && <AddTask onAdd={addTask} />}
-      {/* If there are more than 0 tasks then show them, else show a message */}
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} />
-      ) : (
-        "No tasks... Create one!"
-      )}
-    </div>
+    <Router>
+      <div className="App">
+        <Header
+          onAdd={
+            // () => console.log("clicked")
+            () => setShowAddTask(!showAddTask)
+          }
+          showAdd={showAddTask}
+        />
+        <Routes>
+          <Route
+            path='/'
+            exact
+            element={
+              <>
+                {/* //if showAddTask is true then show the forms */}
+                {showAddTask && <AddTask onAdd={addTask} />}
+                {/* If there are more than 0 tasks then show them, else show a message */}
+                {tasks.length > 0 ? (
+                  <Tasks tasks={tasks} onDelete={deleteTask} />
+                ) : (
+                  "No tasks... Create one!"
+                )}
+              </>
+            }
+          />
+          <Route path='/about' element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
