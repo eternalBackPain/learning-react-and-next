@@ -14,3 +14,5 @@ To build for production:
 2. deploy the new 'build' folder
 - To download the node package for a http server: sudo npm i -g serve
 - To then serve on our prod server local host 8000: serve -s build -p 8000
+
+![image](https://user-images.githubusercontent.com/97266283/210164082-bbbfdb18-78a1-41b9-b65d-2060d72a1945.png)
